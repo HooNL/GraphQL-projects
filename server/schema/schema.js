@@ -46,7 +46,7 @@ const RootQuery = new GraphQLObjectType({
     clients: {
       type: new GraphQLList(ClientType),
       resolve(parent, args) {
-        return clients
+        return Client.find()
       },
     },
     projects: {
